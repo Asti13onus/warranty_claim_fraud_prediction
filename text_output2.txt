@@ -1,0 +1,178 @@
+
+runfile('C:/Users/91807/Downloads/warranty_claim.py', wdir='C:/Users/91807/Downloads')
+Dataset shape: (358, 21)
+Missing values:
+Region              0
+State               0
+Area                0
+City                0
+Consumer_profile    0
+Product_category    0
+Product_type        0
+AC_1001_Issue       0
+AC_1002_Issue       0
+AC_1003_Issue       0
+TV_2001_Issue       0
+TV_2002_Issue       0
+TV_2003_Issue       0
+Claim_Value         0
+Service_Centre      0
+Product_Age         0
+Purchased_from      0
+Call_details        0
+Purpose             0
+Fraud               0
+dtype: int64
+Duplicate values: 0
+Data types:
+Region               object
+State                object
+Area                 object
+City                 object
+Consumer_profile     object
+Product_category     object
+Product_type         object
+AC_1001_Issue         int64
+AC_1002_Issue         int64
+AC_1003_Issue         int64
+TV_2001_Issue         int64
+TV_2002_Issue         int64
+TV_2003_Issue         int64
+Claim_Value         float64
+Service_Centre        int64
+Product_Age           int64
+Purchased_from       object
+Call_details        float64
+Purpose              object
+Fraud                 int64
+dtype: object
+Unique values:
+Region                8
+State                20
+Area                  2
+City                 27
+Consumer_profile      2
+Product_category      2
+Product_type          2
+AC_1001_Issue         3
+AC_1002_Issue         3
+AC_1003_Issue         3
+TV_2001_Issue         3
+TV_2002_Issue         3
+TV_2003_Issue         3
+Claim_Value         107
+Service_Centre        7
+Product_Age         188
+Purchased_from        3
+Call_details         37
+Purpose               3
+Fraud                 2
+dtype: int64
+        Claim_Value  Service_Centre  Product_Age  Call_details       Fraud
+count    358.000000      358.000000   358.000000    358.000000  358.000000
+mean   11994.534916       12.812849   201.843575     11.931844    0.097765
+std    12063.213579        1.766844   259.731564     11.559474    0.297413
+min        0.000000       10.000000     3.000000      0.500000    0.000000
+25%     4006.000000       12.000000    14.000000      1.600000    0.000000
+50%     7194.000000       13.000000    60.000000      6.500000    0.000000
+75%    15000.000000       15.000000   303.750000     23.000000    0.000000
+max    50000.000000       16.000000   991.000000     30.000000    1.000000
+       Region       State   Area  ... Call_details    Purpose Fraud
+0       South   Karnataka  Urban  ...          0.5  Complaint     1
+1       South   Karnataka  Rural  ...          1.0  Complaint     0
+2       North     Haryana  Urban  ...          1.4      Claim     0
+3       South  Tamil Nadu  Urban  ...          2.0  Complaint     0
+4  North East   Jharkhand  Rural  ...          1.3      Claim     0
+
+[5 rows x 20 columns]
+
+
+
+
+
+
+Region: [4 1 2 3 5 6 7 0]
+State: [10  6 16  9 11  0  2  5  3 13 19  4  8  1 15 12 18 17  7 14]
+Area: [1 0]
+City: [ 2  5  6 21 11  9 18 20 24 16 15  1 19 12 26 17 23  8 10  3 14  7  0 22
+  4 25 13]
+Consumer_profile: [0 1]
+Product_category: [0 1]
+Product_type: [1 0]
+AC_1001_Issue: [0 1 2]
+AC_1002_Issue: [0 1 2]
+AC_1003_Issue: [0 2 1]
+TV_2001_Issue: [1 0 2]
+TV_2002_Issue: [2 0 1]
+TV_2003_Issue: [0 2 1]
+Purchased_from: [2 0 1]
+Purpose: [1 0 2]
+
+
+
+
+
+
+
+Fitting 5 folds for each of 500 candidates, totalling 2500 fits
+Best parameters for Decision Tree Classifier: {'criterion': 'gini', 'max_depth': 2, 'min_samples_leaf': 2, 'min_samples_split': 2, 'random_state': 0}
+Decision Tree training accuracy: 0.9184549356223176
+Fitting 5 folds for each of 256 candidates, totalling 1280 fits
+Best parameters for Random Forest Classifier: {'criterion': 'gini', 'max_depth': 2, 'min_samples_leaf': 2, 'min_samples_split': 2, 'random_state': 0}
+Random Forest training accuracy: 0.9184549356223176
+C:\Users\91807\anaconda3\Lib\site-packages\sklearn\linear_model\_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+Logistic Regression training accuracy: 0.9184549356223176
+
+
+
+
+
+Classification Report for Decision Tree Classifier:
+              precision    recall  f1-score   support
+
+           0       0.92      1.00      0.96        93
+           1       0.00      0.00      0.00         8
+
+    accuracy                           0.92       101
+   macro avg       0.46      0.50      0.48       101
+weighted avg       0.85      0.92      0.88       101
+
+Classification Report for Random Forest Classifier:
+              precision    recall  f1-score   support
+
+           0       0.92      1.00      0.96        93
+           1       0.00      0.00      0.00         8
+
+    accuracy                           0.92       101
+   macro avg       0.46      0.50      0.48       101
+weighted avg       0.85      0.92      0.88       101
+
+Classification Report for Logistic Regression:
+              precision    recall  f1-score   support
+
+           0       0.92      1.00      0.96        93
+           1       0.00      0.00      0.00         8
+
+    accuracy                           0.92       101
+   macro avg       0.46      0.50      0.48       101
+weighted avg       0.85      0.92      0.88       101
+
+==================== Decision Tree Classifier ====================
+Accuracy Score: 0.9207920792079208
+R2 Score: -0.08602150537634379
+Mean Squared Error: 0.07920792079207921
+==================== Random Forest Classifier ====================
+Accuracy Score: 0.9207920792079208
+R2 Score: -0.08602150537634379
+Mean Squared Error: 0.07920792079207921
+==================== Logistic Regression ====================
+Accuracy Score: 0.9207920792079208
+R2 Score: -0.08602150537634379
+Mean Squared Error: 0.07920792079207921
